@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <title>Accueil - Nolann MOISIS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header-bar"></div>
+<header>
+    <h1 class="logo">LOGO-ICI</h1>
+    <nav>
+        <a href="index.html" class="nav-link" id="index-link">ACCUEIL</a>
+        <a href="portfolio.html" class="nav-link" id="portfolio-link">PORTFOLIO</a>
+        <a href="contact.html" class="nav-link" id="contact-link">CONTACT</a>
+    </nav>
+</header>
+<main class="main-container">
+    <div class="profile-section">
+        <img src="assets/me.jpg" alt="Photo de Nolann" class="profile-pic" loading="lazy">
+        <div class="name-box">Nolann MOISIS</div>
+        <div class="social-links">
+            <a href="https://github.com/nolannmoisis" target="_blank" aria-label="Lien vers GitHub de Nolann"><img src="assets/github.png" alt="GitHub"></a>
+            <a href="mailto:nolannmoisis@gmail.com" aria-label="Envoyer un email à Nolann"><img src="assets/mail.png" alt="Email"></a>
+            <a href="https://www.instagram.com/nolann.mss/" target="_blank" aria-label="Lien vers Instagram de Nolann"><img src="assets/instagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+    <div class="bio">
+        <p>Salut, je m’appelle Nolann, actuellement étudiant en école d’ingénieur et spécialisé dans l’informatique et la programmation, j’adore la R&D et travailler sur des projets intéressants et nécessitant des compétences multiples.</p>
+    </div>
+</main>
+<footer></footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const path = window.location.pathname;
+        if (path.includes("portfolio.html")) {
+            document.getElementById("portfolio-link").classList.add("current");
+        } else if (path.includes("contact.html")) {
+            document.getElementById("contact-link").classList.add("current");
+        } else {
+            document.getElementById("index-link").classList.add("current");
+        }
+    });
+</script>
+</body>
+</html>

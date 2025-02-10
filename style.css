@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E3EAFC;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.header-bar {
+    width: 100%;
+    height: 1.5vh;
+    background-color: #0D225E;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    color: #EAF0FA;
+    border-bottom: 2px solid #012F5D;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    padding: 5px;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #D5D5D5;
+    color: #EAF0FA;
+    padding: 5px 15px;
+    border: 2px solid #0C3148;
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out;
+}
+
+nav a:hover, nav a.current {
+    background-color: #3A4F7A;
+}
+
+.main-container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    flex: 1;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 80%;
+    justify-content: center;
+    padding: 40px;
+}
+
+.profile-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 15px;
+}
+
+.profile-pic {
+    width: 35%;
+    height: 35%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid #1C2B4F;
+}
+
+.name-box {
+    background-color: #0C3148;
+    color: #EAF0FA;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bio {
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: 5%;
+    max-height: 32%;
+    right: 5%;
+    transform: translateY(-50%);
+    flex-shrink: 0;
+    position: relative;
+    top: -10px;
+    width: 20%;
+    height: 50%;
+    padding: 20px;
+    background-color: #0C3148;
+    color: #EAF0FA;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid #012F5D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EAF0FA;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+}
+
+.social-links img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    .bio {
+        width: 220px;
+        height: 350px;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .bio {
+        width: 200px;
+        height: 320px;
+        font-size: 12px;
+    }
+}
+
+.portfolio-content {
+    text-align: center;
+    padding: 40px;
+    width: 80%;
+    margin: auto;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.project-item {
+    background-color: #0C3148;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-title {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-item:hover .project-title {
+    opacity: 1;
+}
+
+.project-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #EAF0FA;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
